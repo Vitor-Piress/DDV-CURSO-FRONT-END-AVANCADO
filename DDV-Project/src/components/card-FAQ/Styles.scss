@@ -1,0 +1,43 @@
+@use "../../styles/variables.scss" as colors;
+
+@mixin centerFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+
+#card-header {
+  @include centerFlex();
+  justify-content: space-between;
+  padding: 0.8rem;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  cursor: pointer;
+}
+
+#card-header:hover {
+  background-color: colors.$white-hover;
+}
+
+#content-container {
+  background-color: colors.$light-green;
+  padding: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+}
+
+#icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  /* cursor: pointer; */
+}

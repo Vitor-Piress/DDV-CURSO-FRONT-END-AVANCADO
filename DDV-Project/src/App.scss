@@ -1,0 +1,67 @@
+@use "styles/variables.scss" as colors;
+
+@mixin centerFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "inter", sans-serif;
+}
+
+#everything-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: colors.$light-green;
+  @include centerFlex();
+}
+
+#background-image {
+  width: 100%;
+  height: 45%;
+  background-image: url(assets/background.svg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#FAQ-container {
+  padding: 3.2rem 2rem 2rem;
+  max-width: 65.2rem;
+  width: 80%;
+  height: 36rem;
+  background-color: colors.$white;
+  border-radius: 0.8rem;
+  z-index: 99;
+  overflow-y: hidden;
+
+  header {
+    width: 100%;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    h2 {
+      font-size: 4.4rem;
+      font-weight: 700;
+    }
+  }
+}
+
+#main-container {
+  @include centerFlex();
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+  padding: 0.2rem;
+  padding-bottom: 7rem;
+  overflow-y: scroll;
+}

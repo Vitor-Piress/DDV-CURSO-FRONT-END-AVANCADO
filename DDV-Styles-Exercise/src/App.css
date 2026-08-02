@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inter, sans-serif;
+}
+
+p,
+li {
+  font-family: roboto, sans-serif;
+}
